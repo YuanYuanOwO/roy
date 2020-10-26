@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+	<script>
+		var _hmt = _hmt || [];
+(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "https://hm.baidu.com/hm.js?b4a5351b0f5afb38678223fc33b8c5cc";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+})();
+	</script>
+
+</head>
+<body>
+	<p>每次刷新间隔 15秒</p>
+	<table style="width: 100%;">
+		<tr>
+			<td>百度搜索</td>
+			<td>微博搜索</td>
+		</tr>
+		<tr>
+			<td>
+	<iframe style="width: 100%" height="600" id="baidu" frameborder=”no” border=”0″ marginwidth=”0″ marginheight=”0″ scrolling=”no” allowtransparency=”yes” src="https://m.baidu.com/s?word=邱泽微博">
+		<head>
+	        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	    </head>
+	</iframe>
+</td>
+<td>
+
+	<iframe style="width: 100%" height="600" id="weibo" frameborder=”no” border=”0″ marginwidth=”0″ marginheight=”0″ scrolling=”no” allowtransparency=”yes” src="https://s.weibo.com/weibo/邱泽采访?topnav=1&wvr=6&b=1">
+		<head>
+	        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	    </head>
+	</iframe>
+</td>
+</tr>	
+
+<script type="text/javascript" src="//js.users.51.la/20682709.js"></script>
+</body>
+
+<script>
+var baidu_kws = [
+	'壁纸',
+	'唐人街探案',
+	'微博',
+	'顾飞',
+	'林默',
+	'房天忆',
+	'高裕杰',
+	'生活家',
+	'八岁的爸爸',
+	'谁先爱上他的'
+];
+
+var weibo_kws = [
+	'壁纸',
+	'采访',
+	'追梦人',
+	'眼睛',
+	'直播',
+	'未来可期',
+	'林默',
+	'唐人街探案',
+	'公益',
+	'谁先爱上他的',
+	'生活家'
+];
+
+function searchBaidu(){
+	var kw = baidu_kws[Math.floor((Math.random()*baidu_kws.length))]
+	document.getElementById("baidu").src='https://m.baidu.com/s?word=邱泽' + kw
+	document.getElementById("baidu").height=document.documentElement.clientHeight;
+}
+
+function searchWeibo(){
+	var kw = weibo_kws[Math.floor((Math.random()*weibo_kws.length))]
+	document.getElementById("weibo").src='https://s.weibo.com/weibo/邱泽' + kw + '?topnav=1&wvr=6&b=1'
+	document.getElementById("weibo").height=document.documentElement.clientHeight;
+}
+
+setInterval(searchBaidu, 15000)
+setInterval(searchWeibo, 15000)
+</script>
+
+</html>
